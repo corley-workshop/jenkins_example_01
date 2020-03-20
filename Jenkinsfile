@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        label 'agente1'
+    }
 
     stages {
         stage("Test and publish result") {
