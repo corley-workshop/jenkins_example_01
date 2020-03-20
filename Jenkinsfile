@@ -31,7 +31,8 @@ pipeline {
         stage("Stop old container") {
             steps {
                 script {
-                    sh 'docker stop web || true'
+                    // sh 'docker stop web || true'
+                    sh 'docker stop webnonesisto'
                 }
             }
         }
