@@ -2,6 +2,10 @@ pipeline {
     agent {
         label 'agente1'
     }
+    
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '3'))
+    }
 
     stages {
         stage("Test and publish result") {
